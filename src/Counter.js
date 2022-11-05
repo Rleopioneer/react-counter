@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+//useState e useEffect
+import React, { useState, useEffect } from "react";
 //método para gerenciar estado do componente
 import './Counter.css'
 
-
 //criar função para adicionar evento de click, precisa ser dentro do componente
+//retora um array c um estado e uma função para alterar o estado
 const Counter = () => {
-    //retora um array c um estado e uma função para alterar o estado
+    
     const [count, setCount] = useState(0)
+    
+    //recebe callback e array de dependências
+    useEffect(() => {
+      console.log('renderizou')}
+      , [count]) //executa a função toda vez que a variável for modificada
 
     //"handle' = função que gerencia um evento
     const handleClick = operator => {
