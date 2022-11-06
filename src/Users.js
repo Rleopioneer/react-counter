@@ -1,7 +1,9 @@
 import React, { useState, useEffect} from "react";
+import Template from './Template'
+import Loading from './Loading'
 
 const Users = () => {
-    const [loading, setLoading] = useState(false)
+    const [isLoading, setLoading] = useState(false)
     
     //faz requisição
     useEffect(() => {
@@ -18,12 +20,8 @@ const Users = () => {
     const [users, setUsers] = useState([])
 
     return (
-        <>
-            <h1>Users</h1>
-            {
-                loading === true ? 'Carregando ...' : ''
-            }
-
+        <Template title="Usuários">
+            <Loading visible={isLoading} />
             {
                 users.map(user => {
                     return (
@@ -33,7 +31,7 @@ const Users = () => {
                     )
                 })
             }
-        </>
+        </Template>
     )
 
 }

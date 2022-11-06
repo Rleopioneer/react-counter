@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import Template from './Template'
+import Loading from './Loading'
 
 const Albums = () => {
 
-    const [loading, setLoading] = useState(false)
+    const [isLoading, setLoading] = useState(false)
 
     const [albums, setAlbums] = useState([])
 
@@ -19,12 +21,8 @@ const Albums = () => {
     
 
     return (
-        <> 
-            <h1>Álbuns</h1>
-
-            {
-                loading === true ? 'Carregando...' : ''
-            }
+        <Template title="Álbuns"> 
+            <Loading visible={isLoading} />
 
             {
                 albums.map(album => {
@@ -35,7 +33,7 @@ const Albums = () => {
                     )
                 })
             }
-        </>
+        </Template>
     )
 
 }
