@@ -1,6 +1,6 @@
 //useState e useEffect
 import React, { useState, useEffect } from "react";
-import Template from './Template'
+
 
 //método para gerenciar estado do componente
 import './Counter.css'
@@ -25,13 +25,13 @@ const Counter = () => {
     //passar função como callback
   return (
 
-      <Template title="Contador">
+      <>
         <div className="counter">
           <span>{count}</span>
           <button onClick={() => handleClick('-')} >-</button>
           <button onClick={() => handleClick('+')} >+</button>
         </div>
-      </Template>
+      </>
   )
   
 }
