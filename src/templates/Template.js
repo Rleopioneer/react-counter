@@ -1,6 +1,6 @@
 import React from "react";
-import Header from './Header'
-import Navbar from './Navbar'
+import Header from '../partials/Header'
+import Navbar from '../partials/Navbar'
 
 const Template = ({children, pages, activePage, onChangePage}) => {
 

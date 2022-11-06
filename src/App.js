@@ -1,9 +1,9 @@
 import React, { useState}from "react";
 
-import Template from './Template'
-import Counter from './Counter'
-import Albums from './Albums'
-import Users from './Users'
+import Template from './templates/Template'
+import Counter from './pages/Counter'
+import Albums from './pages/Albums'
+import Users from './pages/Users'
 import './App.css'
 
 //Melhor navegação
